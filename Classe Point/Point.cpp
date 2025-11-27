@@ -1,11 +1,9 @@
 #include "Point.h"
-using namespace std;
+using namespace geom;  // organisation vertuelle  ou bien   geom::Point....
 #include <iostream>
-#include <math.h>
+#include<string>
 
-Point::Point(float X, float Y){
-	this->X = X;
-	this->Y = Y;
+Point::Point(float X, float Y ,string id): id(id) ,X(X),Y(Y){
 }
 
 float Point::distance(Point P1)
@@ -15,5 +13,16 @@ float Point::distance(Point P1)
 
 void Point::afficher()
 {
-	cout << "(" << this->X << "," << this->Y << ")" << endl;
+	cout << this->id<<"(" << this->X << "," << this->Y << ")" ;
 }
+
+Point::~Point()
+{
+	cout << "call Point destructor" << endl;
+}
+
+/*Point::Point(const Point& P):id(P.id)
+{
+	this->X =P. X;
+	this->Y = P.Y;
+}*/

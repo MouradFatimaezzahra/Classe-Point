@@ -3,15 +3,26 @@
 
 #include <iostream>
 #include"Point.h"
+#include"Segment.h"
+using namespace geom;
+using namespace std;
 
 int main()
 {
-    Point P1(2.0,3.0);
-    Point P2(5.0, 1.0);
+    Point P1(2, 4,"P1");
+    Point P2(3, 5, "P2");
+    Point *P3=new Point(5, 1 ,"P3");
     P1.afficher();
     P2.afficher();
-    std::cout<<"la distance entre les deux points est "<<P1.distance(P2);
+    P3->afficher();
+    /*geom::*/Segment S1(&P1, &P2, "S1");
+    S1.afficher();
+    Segment *S2=new Segment (&P1, P3, "S1");
+    S2->afficher();
+   cout<<"la distance entre les deux points est "<<P1.distance(P2);
 
+    delete P3;
+    delete S2;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

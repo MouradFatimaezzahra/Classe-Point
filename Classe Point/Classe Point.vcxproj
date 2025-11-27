@@ -125,9 +125,11 @@
   <ItemGroup>
     <ClCompile Include="Classe Point.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Segment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Segment.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
